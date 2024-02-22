@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+    :root {
+      /* Base */
+      --background: 0, 0%, 98%; /* Very light grey */
+      --foreground: 220, 15%, 20%; /* Dark grey for text */
+      
+      /* Card */
+      --card: 0, 0%, 100%; /* White */
+      --card-foreground: 220, 15%, 20%; /* Dark grey for text */
+  
+      /* Popover */
+      --popover: 0, 0%, 100%;
+      --popover-foreground: 220, 15%, 20%;
+      --primary-hover: 195, 100%, 80%;
+      /* Colors */
+      --primary: 195, 100%, 75%; /* Soft blue */
+      --primary-foreground: 220, 20%, 20%; /* Dark grey for contrast */
+      
+      --secondary: 163, 45%, 55%; /* Soft green */
+      --secondary-foreground: 220, 20%, 20%; /* Dark grey */
+  
+      --muted: 222, 25%, 88%; /* Very light blue */
+      --muted-foreground: 220, 25%, 20%; /* Dark grey */
+  
+      /* Updating the accent color to a different shade of soft green */
+      --accent: 163, 60%, 65%; /* Adjusted soft green */
+      --accent-foreground: 220, 25%, 20%; /* Dark grey */
+  
+      --destructive: 358, 75%, 65%; /* Soft red */
+      --destructive-foreground: 0, 0%, 100%; /* White for contrast */
+      --destructive-hover: 358, 75%, 70%; 
+
+
+      --border: 210, 25%, 88%;
+      --input: 210, 15%, 95%;
+      --ring: 195, 100%, 75%; /* Soft blue to match primary */
+  
+      /* Misc */
+      --radius: 0.5rem;
+  
+      /* Adjusted gradient example to include the new accent color */
+      --gradient-primary: linear-gradient(45deg, hsl(195, 100%, 75%), hsl(163, 60%, 65%));
+      --gradient-accent: linear-gradient(45deg, hsl(163, 60%, 65%), hsl(195, 100%, 75%));
+  }
+  
+  .dark {
+   /* Base */
+   --background: 220, 30%, 12%; /* Dark slate */
+   --foreground: 0, 0%, 100%; /* White */
+ 
+   /* Card */
+   --card: 222, 22%, 18%; /* Slightly lighter dark slate */
+   --card-foreground: 0, 0%, 100%; /* White */
+ 
+   /* Popover */
+   --popover: 222, 22%, 18%;
+   --popover-foreground: 0, 0%, 100%;
+ 
+   /* Colors */
+   --primary: 195, 100%, 50%; /* Bright blue */
+   --primary-foreground: 0, 0%, 100%; /* White for contrast */
+ 
+   --secondary: 163, 72%, 48%; /* Green */
+   --secondary-foreground: 0, 0%, 100%; /* White */
+ 
+   --muted: 222, 15%, 58%; /* Muted blue */
+   --muted-foreground: 0, 0%, 100%; /* White */
+ 
+   --accent: 345, 100%, 50%; /* Neon pink */
+   --accent-foreground: 0, 0%, 100%; /* White */
+ 
+   --destructive: 358, 79%, 53%; /* Bright red */
+   --destructive-foreground: 0, 0%, 100%; /* White for contrast */
+ 
+   --border: 210, 10%, 40%;
+   --input: 210, 10%, 25%;
+   --ring: 195, 100%, 50%; /* Bright blue to match primary */
+ 
+   /* Misc */
+   --radius: 0.5rem;
+ 
+   /* Gradient example for backgrounds or elements */
+   --gradient-primary: linear-gradient(45deg, hsl(195, 100%, 75%), hsl(163, 45%, 55%));
+  --gradient-accent: linear-gradient(45deg, hsl(345, 80%, 65%), hsl(358, 75%, 65%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/montserrat/Montserrat-Regular.ttf') format('truetype'); 
+  font-weight: 400; /* Adjust if needed */
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/montserrat/Montserrat-Bold.ttf') format('truetype'); 
+  font-weight: 700; /* Adjust if needed */
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../public/fonts/roboto-slab/RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
